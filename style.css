@@ -1,0 +1,198 @@
+:root {
+    --background-color: white;
+    --background-color-inverted: #131313;
+    --text-color-primary: #131313;
+    --text-color-primary-inverted: white;
+
+    --navbar-height: 30px;
+    --accent-color: green;
+}
+
+.dark {
+    --background-color: #131313;
+    --background-color-inverted: white;
+    --text-color-primary: white;
+    --text-color-primary-inverted: black;
+}
+
+.dark-blue {
+    --background-color: rgb(138, 50, 12);
+    --background-color-inverted: white;
+    --text-color-primary: white;
+    --text-color-primary-inverted: black;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--background-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    /* outline: 2px solid red; */
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    height: var(--navbar-height);
+    background-color: green;
+}
+
+main {
+    flex: 1;
+}
+
+main .container {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-color-primary);
+}
+
+#your-best-time {
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+    overflow: hidden;
+
+    display: none;
+    flex-direction: column;
+}
+
+    #your-best-time span {
+        font-size: .7rem;
+        padding: .3em 1em;
+        color: var(--text-color-primary-inverted);
+        text-transform: uppercase;
+        background-color: var(--accent-color);
+    }
+
+    #your-best-time #records {
+        padding-top: .5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #your-best-time button {
+        font-size: .7rem;
+        margin-top: .8em;
+        color: gray;
+    }
+
+    #your-best-time button:hover {
+        text-decoration: underline;
+    }
+    
+    .record {
+        text-align: right;
+        font-size: .8rem;
+        padding: .1em;
+    }
+
+#tut {
+    font-size: .7rem;
+    opacity: .5;
+}
+
+#game-status {
+    display: none;
+}
+
+#escape {
+    font-size: .7rem;
+    opacity: .5;
+}
+
+#ellapsed-time {
+    font-size: .8rem;
+    opacity: .5;
+    text-align: center;
+}
+
+#alphabet {
+    font-size: 5rem;
+}
+
+#results {
+    display: none;
+    /* display: flex; */
+    text-align: center;
+}
+
+    #results #time {
+        font-size: 5rem;
+    }
+
+    #results span {
+        font-size: .8rem;
+    }
+
+    #results span:last-child {
+        font-size: .6rem;
+        opacity: .5;
+    }
+
+#gameRestartBtn {
+    background-color: var(--accent-color);
+    padding: .8em 2em;
+    margin: 1em auto 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(black,.3);
+    color: var(--text-color-primary);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #101010;
+    color: #454545;
+    font-size: .8rem;
+
+    height: 50px;
+}
